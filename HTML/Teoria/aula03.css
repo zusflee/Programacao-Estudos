@@ -1,0 +1,41 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+
+    margin: 0;
+
+}
+
+
+#cabecalho {
+
+    background-color: #1f4e79;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.secao {
+
+    background-color: white;
+
+    width: 900px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 8px;
+
+}
+
+

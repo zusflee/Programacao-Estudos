@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação de Reserva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Solicitação de Reserva</h1>
+    <p class="subtitulo">Preencha os dados abaixo para solicitar sua reserva.</p>
+
+    <form id="reservaForm" novalidate>
+
+      <div class="form-group">
+        <label for="nome">Nome completo do hóspede</label>
+        <input type="text" id="nome" name="nome" required minlength="5" autocomplete="name">
+        <span class="erro" id="erro-nome"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+          <span class="erro" id="erro-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="(19) 98765-4321" autocomplete="tel">
+          <span class="erro" id="erro-telefone"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+        <span class="erro" id="erro-nascimento"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="checkin">Data de check-in</label>
+          <input type="date" id="checkin" name="checkin" required>
+          <span class="erro" id="erro-checkin"></span>
+        </div>
+        <div class="form-group">
+          <label for="checkout">Data de check-out</label>
+          <input type="date" id="checkout" name="checkout" required>
+          <span class="erro" id="erro-checkout"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="hospedes">Quantidade de hóspedes</label>
+        <input type="number" id="hospedes" name="hospedes" required min="1" max="5" step="1">
+        <span class="erro" id="erro-hospedes"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="quarto">Tipo de quarto</label>
+        <select id="quarto" name="quarto" required>
+          <option value="">Selecione</option>
+          <option value="Individual">Individual (1 pessoa)</option>
+          <option value="Duplo">Duplo (2 pessoas)</option>
+          <option value="Família">Família (5 pessoas)</option>
+        </select>
+        <span class="erro" id="erro-quarto"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="senha">Senha para acompanhamento da reserva</label>
+          <input type="password" id="senha" name="senha" required minlength="8" autocomplete="new-password">
+          <span class="erro" id="erro-senha"></span>
+        </div>
+        <div class="form-group">
+          <label for="confirmaSenha">Confirmação da senha</label>
+          <input type="password" id="confirmaSenha" name="confirmaSenha" required minlength="8" autocomplete="new-password">
+          <span class="erro" id="erro-confirmaSenha"></span>
+        </div>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <span>Li e aceito as condições da reserva</span>
+        </label>
+        <span class="erro" id="erro-aceite"></span>
+      </div>
+
+      <button type="submit" id="btnSolicitar">Solicitar reserva</button>
+    </form>
+
+    <section id="resultado" class="resultado oculto" aria-live="polite">
+      <p class="sucesso-msg">✅ Solicitação de reserva realizada com sucesso!</p>
+      <pre id="jsonReserva"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

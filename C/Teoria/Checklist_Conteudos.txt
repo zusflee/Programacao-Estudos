@@ -1,0 +1,12 @@
+- Controle de Fluxo
+Condicionais: if, else if, else e switch / case (treinar um pouco mais).
+Laços de repetição: for, while e do-while (treinar um pouco mais).
+
+Operador Ternário:
+condição ? expressão1 : expressão2
+
+Vetores (Razoavelmente bem) e matrizes (treinar mais).
+
+Structs (treinar).
+
+Funções (treinar).

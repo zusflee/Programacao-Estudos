@@ -1,0 +1,36 @@
+# Binários e executáveis compilados (C)
+output/
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.dll
+*.so
+*.dSYM/
+ 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+ 
+# Node / JavaScript
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+ 
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+ 
+# Arquivos temporários
+*.tmp
+*.bak
+*~

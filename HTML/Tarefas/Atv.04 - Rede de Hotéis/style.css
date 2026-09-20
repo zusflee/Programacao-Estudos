@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f4f7;
+  color: #1f2937;
+  padding: 24px 16px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.subtitulo {
+  margin: 0 0 24px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Em telas pequenas: uma coluna só (padrão flex-direction: column) */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.campo-invalido {
+  border-color: #dc2626 !important;
+}
+
+.campo-invalido:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+}
+
+.erro {
+  min-height: 16px;
+  color: #dc2626;
+  font-size: 0.8rem;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+}
+
+button#btnSolicitar {
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button#btnSolicitar:hover {
+  background: #1d4ed8;
+}
+
+.resultado {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.resultado.oculto {
+  display: none;
+}
+
+.sucesso-msg {
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #047857;
+}
+
+#jsonReserva {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.85rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Em telas maiores, alguns campos ficam lado a lado */
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+  }
+}

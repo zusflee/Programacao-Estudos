@@ -1,0 +1,47 @@
+
+body{
+    margin: 0px;
+
+}
+
+/*
+Cores.
+
+body{
+    color: blue;    Altera a cor da font.
+    background-color: green;    Altera a cor de fundo da font.
+}
+*/
+
+/*
+Fonts.
+
+body{
+    font-family: Arial, Helvetica, sans-serif;  Define o modelo de font.
+    font-size: 16px;    Define o tamanho da font.
+    font-weight: normal;    Define a espessura da font(grossura).
+    font-style: normal;    Define o estilo da font(ex: italico).
+}
+*/
+
+/*
+Bordas.
+
+body{
+    border: 2px solid black;    1ºEspessura da Borda, 2ºEstilo da Borda, 3ºCor da Borda.
+    border-radius: 5px; Arrendondamento da Borda.
+}
+*/
+
+/*
+Sombras
+
+body{
+    text-shadow: 5px 5px 3px red;   1ºControla o deslocamento horizontal da sombra, 2ºControla o deslocamento vertical da sombra, 3ºControla o blur da sombra, 4ºAltera a cor da sombra.
+    box-shadow: 3px 3px 5px;        Mesma configuração do text porém destinado a box.
+}
+
+/*
+Margens
+
+body{

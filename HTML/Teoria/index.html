@@ -3,10 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
-        <title> Aula 01 - HTML</title>
+        <link rel="icon" type="image/jpg" href="/HTML/Teoria/icon/favicon.jpg"> <!--Icon do Site-->
+        <title> Aula 01 - HTML</title> <!--Título do Site-->
+        <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
         <!--Comentários-->
+        <h2>Hierarquia de Parágrafos.</h2>
         <h1>Título 1</h1> <!--Hierarquia de Parágrafos.-->
         <h2>Título 2</h2>
         <h3>Título 3</h3>
@@ -24,7 +27,6 @@
             Texto da linha 2.
         </p>
 
-
         <p> <!--Geração de Linha.-->
             Texto <b>negrito</b>,  <i> itálico</i>, <u> sublinhando</u>. 
             <br>
@@ -35,7 +37,21 @@
             Fórmula da Água: h<sub>2</sub>O. <!--Deixa o 2 embaixo.-->
             <br>
             Expressão Matemática: L<sup>2</sup>. <!--Deixa o 2 emcima.-->
+            <br>
+            <pre>
+                Crescei, luar
+                Pra iluminar as trevas
+                Fundas da paixão
+                Eu quis lutar
+                Contra o poder do amor
+                Caí­ nos pés do vencedor
+                Para ser o serviçal
+                Do samurai
+                Mas eu to' tão feliz
+                Dizem que o amor atrai  <!--Pré formata o texto com base nas quebras de linhas.-->
+            </pre>
         </p>
+        
 
         <hr>
         <h2>Listas</h2>
@@ -80,14 +96,17 @@
         </dl>
         
         <hr>
-        <h2>LINKS</h2>
+        <h2>Links</h2>
 
         <p>
             Link externo:
-            <a href="https:/www.google.com" target="_blank">Clique aqui</a>  <!--href armazena o hiper link. _blank indica a mensagem de auxilio para a pessoa-->
+            <a href="https:/www.google.com" target="_blank" title="Foto do down" rel="noopener">Clique aqui</a>  <!--href armazena o hiper link. _blank indica a mensagem de auxilio para a pessoa. title exibe uma mensagem ao passar o cursor no link. noopener segurança que impede que uma página aberta em uma nova aba tenha acesso ao objeto de janela do site original-->
+            <br>
+            <p>Envio de emails:
+                <a href="mailto:souzaleonardo.ads@gmail.com" target="_blank">Enviar Email</a> <!-- mailto é usado para envio de emails. -->
+            </p>
         </p>
         
-
         <p>
             Link Interno: <!--Referencia o link da própria página.-->
             <a href="#paragrafo">Ir para a seção Parágrafos e Formatação</a> <!--#Referencia o id da tag-->
@@ -99,14 +118,39 @@
         </p>
 
         <hr>
+
         <h2>Imagens</h2>
-        <img
-            src = "https://tse3.mm.bing.net/th/id/OIP.Iajnbe-bnA1PijVBqvRqYgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+        <img 
+            src = "https://www.meutimao.com.br/fotos-do-corinthians/w941/2022/07/04/jogadores_fazem_festa_com_o_trofeu_da_libertadores_w9us.jpg" 
             alt = "Careca Africano"
             width = "500"
             height= "300"
         >
-        
+        <!-- Imagem Web -->
+        <br>
+        <img 
+            src="/HTML/Teoria/image/GOATS.jpg" 
+            alt="Equipe Furia"
+            width="500"
+            height="380"    
+        >   <!-- Imagem Local -->
+        <br>
+        <img 
+            src="/HTML/Teoria/image/cr7.gif"
+            alt="Cristiano Ronaldo"
+            height="300"
+        >   <!-- Outro formato de foto .gif-->
+        <hr>
+
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="/HTML/Teoria/audio/push-push-push-push.mp3">
+
+        </audio>
+        <hr>
+
+        <h2>Video</h2>
+        <video src="/HTML/Teoria/video/Amassando jorge.mp4" height="400" controls></video>
         <hr>
 
         <h2>Tabelas</h2>
@@ -155,24 +199,176 @@
 
         </table>
         <br>
-        <table border="1">
-            <tr>
+        <table border="1" style="background-color: rgb(10, 10, 10);">
+            <tr style="background-color: rgb(119, 176, 226);">
                 <th colspan="3">Meu Horário</th>
             </tr>
-            <tr>
+            <tr style="background-color: lightgreen;">
                 <th>Dia</th>
                 <th>Manhã</th>
                 <th>Tarde</th>
             </tr>
-            <tr>
+            <tr style="background-color: lightblue;">
                 <td rowspan="2">Segunda</td>
                 <td>ITW</td>
                 <td>Programação</td>
             </tr>
-            <tr>
+            <tr style="background-color:  lightyellow;">
                 <td>Banco de Dados</td>
                 <td>Programação</td>
             </tr>
         </table>
+
+        <!--
+        <span> contêiner em linha para agrupar elementos para estilização.
+        <div> contêiner de bloco para agrupar elementos para estilização que envolve todo documento.
+        -->
+        <hr>
+        
+        <h2>Span vs Div</h2>
+
+        <span style="background-color: rgb(11, 212, 129)">Isso é um título na tag span. </span>
+        <div style="background-color: rgb(99, 185, 224);">Isso é um título na tag div.</div>
+
+        <p><span style="background-color: rgb(11, 212, 129);">Isso é um parágrafo na tag span.</span></p>
+        <p><div style="background-color: rgb(99, 185, 224);">Isso é um parágrafo na tag div.</div></p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span style="background-color:rgb(11, 212, 129) ;"> soluta veritatis dolorum quam blanditiis ipsum asperiores, quod voluptas reprehenderit aperiam quo possimus aliquam autem aliquid sapiente voluptates omnis eaque esse?</span></p>
+
+        <hr>
+        
+        <h2>Botões</h2>
+        
+        <button style="font-size: 16px; background-color: lightblue; color: rgb(0, 0, 0); border-radius: 5px;">Clique Aqui</button> <!--Botão sem função-->
+        
+        <br><br>
+
+        <a href="https://op.gg/pt/lol/summoners/br/fleezus-GRIME" target="_blank">
+            <button style="font-size: 16px; background-color: rgb(223, 219, 230); color: rgb(0, 0, 0); border-radius: 5px;">Veja o GOAT do League of Legends</button>   <!-- Direcionamento para outro site. -->
+        </a>
+
+        <br><br>
+
+        <button onclick="Saudacao()" style="background-color: rgb(223, 219, 230); color: black; border-radius: 5px; font-size: 16px;">Clique Aqui</button>
+
+        <p id="mensagem">Olá, Tudo bem ?</p>
+
+        <script>
+            function Saudacao(){
+                document.getElementById("mensagem").innerHTML= "Que bom que você está bem";
+            }
+        </script>       <!-- Função do botão altera a mensagem da tag <p>, utiliza javascript-->
+
+        <hr>
+
+        <h2>Formulário</h2>
+
+        <form method="post" enctype="multipart/form-data">               <!--method get: usado para recolher dados não sensíveis.  method post: recolhe dados sensíveis como user e senha   "multipart/form-data    divide o corpo da requisição em múltiplas partes estruturadas --> 
+            <label for="Username">Username:</label>
+            <input type="text" id="Username" placeholder='Ex:"Fleezus"'  minlength="6" maxlength="12" required> <!--Botão para digitar campo.-->
+            <br><br>
+
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" placeholder="•••••••••••" minlength="6" maxlength="18" required>
+            <br><br>
+
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" placeholder="exemplo@gmail.com" required>
+            <br><br>
+
+            <label for="Telefone">Telefone:</label>
+            <input type="tel" id="Telefone" placeholder="19 99999-9999" pattern="(\+?55\s?)?(\(?\d{2}\)?\s?)(9\d{4}-\d{4}|\d{4}-\d{4})" required>
+            <br><br>
+            
+            <label for="Data">Data de nascimento:</label>
+            <input type="date" id="Data" required>
+            <br><br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" min="0" max="10" value="1" required>
+            <br><br>
+
+            <label for="Cargo">Cargo:</label><br>
+            <label for="Engenheiro">Engenheiro</label>
+            <input type="radio" id="Engenheiro" value="Engenheiro" name="Cargo"> 
+            <label for="Medico">Médico</label>
+            <input type="radio" id="Medico" value="Medico" name="Cargo">
+            <label for="Cantor">Cantor</label>
+            <input type="radio" id="Cantor" value="Cantor" name="Cargo">
+            <br><br>
+
+            <label for="pagamento">Pagamento</label>
+            <select id="pagamento">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Boleto">Boleto</option>
+            </select>
+            <br><br>
+
+            <label for="inscricao">Inscrição</label>
+            <input type="checkbox" id="inscricao"><br><br>
+
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="3" cols="25"></textarea>
+            <br><br>
+            <label for="arquivo">Arquivo:</label>
+            <input type="file" id="arquivo" accept="image/png, /image.jpeg, /image.gif"><br> <!--So permite arquivos no formato .png, .jpeg, .gif-->
+            <br><br>
+            <input type="reset">    <!--Botão para limpar campo.-->
+            <input type="submit">   <!--Botão para enviar campo.-->
+
+            <hr>
+
+            <h2>Cabeçalho e Rodapé</h2>
+            <header>
+                <h1><span style="background-color: darkcyan;">Welcome to Covil da Bruxa</span></h1>
+                <a href="">Página Inicial</a>
+                <a href="">Sobre nos</a>
+                <a href="">Produtos</a>
+                <a href="">Contate-nos</a>
+                <hr>
+            </header>
+
+            <main>
+                <h2>Brasil Grime Show</h2>
+                <img
+                    src="https://i.pinimg.com/736x/8b/3f/1c/8b3f1c529b78d5eb05f1119c42b36048.jpg"
+                    alt="Covil da Bruxa"
+                    width="400"
+                >
+                <pre>
+                    E as ruas ensinam que o melhor tempero é a fome
+                    E esses becos gritam, corra antes que eles te encontrem
+                    Aplique, antes que as balas alcancem
+                    E o nosso sorriso, desespero deles
+                    Motivos de sobra pra elas se molharem
+                    Playboy bom na Austrália, fala feio da falha
+                    Ela só quer os de raça e eu Bllakk rottweiler
+                    Convoco no 'zap pra brotar de base como se importasse
+                    Eu vi menor de idade se envolver no crime
+                    Falando pra mãe que ia voltar mais tarde
+                    Drogas que chamam, roupas que encantam
+                    Coisas do tipo Adidas ou Nike
+                    Realidade é bem diferente
+                    Suas peças de marca não valem o caráter que eu tenho
+                    Conheço um mano que trocaria o seu Yeezy
+                    Numa pedra de crack e ele nem sabe se vive
+                    Pentes tão longos que causam vertigem
+                    Se a vida é um curta metragem me diz quem dirige o filme
+                    Takes de Andrei Tarkovsky
+                </pre>
+
+                <pre>
+                    Sirenes (part. SD9)
+                </pre>
+            </main>
+            
+            <footer>
+                <hr>
+                Autor: AntConstantino e diniBoy<br>
+                &copy; Direitos Autorais Reservados<br>
+                <a href="mailto:souzaleonardo.ads@gmail.com">souzaleonardo.ads@gmail.com</a>
+            </footer>
+        </form>
     </body>
 </html>

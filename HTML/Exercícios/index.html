@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição em Minicurso</title>
+</head>
+<body>
+    <header>
+        <h1>Inscrição em Minicurso</h1>
+        <p>Preencha os dados abaixo para realizar sua Inscrição</p>
+    </header>
+
+    <form action="index.html" method="post">
+       <label for="nome">Nome Completo:</label>
+       <br>
+       <input id="nome" name ="nome" type="text" required>
+       <br><br>
+
+       <label for="email">Email:</label>
+       <br>
+       <input id="email" name="email" type="email" placeholder="exemplo@gmail.com" required>
+       <br><br>
+       
+        <p>Turno:</p>
+
+        <input type="radio" id="manha" name="Turno" value="manha">
+        <label for="manha">Manhã</label>
+
+        <input type="radio" id="noite" name="Turno" value="noite">
+        <label for="noite">Noite</label>
+        <br><br>
+
+        <label for="curso">Curso de Interesse:</label><br>
+        <select id="curso" name="curso">
+            <option>HTML e CSS</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Enviar Inscrição</button>
+        <button type="reset">Limpar</button>
+    </form>
+    
+</body>
+</html>
